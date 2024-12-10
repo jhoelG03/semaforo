@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta keywords="gestion,sistemas,quinto">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEMAFORO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="semaforo">
+            <span class="luces-circulo red" id="red"></span>
+            <span class="luces-circulo yellow" id="yellow"></span>
+            <span class="luces-circulo green" id="green"></span>
+        </div>
+        <div class="stick"></div>
+        <div class="floor"></div>
+        <div class="controls">
+            <button onclick="cambiarcolores('red')">Rojo</button>
+            <button onclick="cambiarcolores('yellow')">Amarillo</button>
+            <button onclick="cambiarcolores('green')">Verde</button>
+        </div>
+    </div>
+
+    <script>
+        function cambiarcolores(color) {
+            document.getElementById('red').style.opacity = 0.0;
+            document.getElementById('yellow').style.opacity = 0.0;
+            document.getElementById('green').style.opacity = 0.0;
+            document.getElementById(color).style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
